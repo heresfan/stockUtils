@@ -15,94 +15,118 @@ const (
 )
 
 type BaiduStoctInfo struct {
-	Errnum  int    `json:"errNum,omitempty"`
-	Errmsg  string `json:"errMsg,omitempty"`
+	Errnum  int    `json:"errNum"`
+	Errmsg  string `json:"errMsg"`
 	Retdata struct {
 		Stockinfo []struct {
-			Name          string  `json:"name,omitempty"`
-			Code          string  `json:"code,omitempty"`
-			Date          string  `json:"date,omitempty"`
-			Openningprice float64 `json:"openningPrice,omitempty"`
-			Closingprice  float64 `json:"closingPrice,omitempty"`
-			Hprice        float64 `json:"hPrice,omitempty"`
-			Lprice        float64 `json:"lPrice,omitempty"`
-			Currentprice  float64 `json:"currentPrice,omitempty"`
-			Growth        float64 `json:"growth,omitempty"`
-			Growthpercent float64 `json:"growthPercent,omitempty"`
-			Dealnumber    float64 `json:"dealnumber,omitempty"`
-			Turnover      float64 `json:"turnover,omitempty"`
-			Five2Hprice   float64 `json:"52hPrice,omitempty"`
-			Five2Lprice   float64 `json:"52lPrice,omitempty"`
-		} `json:"stockinfo,omitempty"`
+			Name             string  `json:"name"`
+			Code             string  `json:"code"`
+			Date             string  `json:"date"`
+			Time             string  `json:"time"`
+			Openningprice    float64 `json:"OpenningPrice"`
+			Closingprice     float64 `json:"closingPrice"`
+			Currentprice     float64 `json:"currentPrice"`
+			Hprice           float64 `json:"hPrice"`
+			Lprice           float64 `json:"lPrice"`
+			Competitiveprice float64 `json:"competitivePrice"`
+			Auctionprice     float64 `json:"auctionPrice"`
+			Totalnumber      int     `json:"totalNumber"`
+			Turnover         int     `json:"turnover"`
+			Increase         float64 `json:"increase"`
+			Buyone           int     `json:"buyOne"`
+			Buyoneprice      float64 `json:"buyOnePrice"`
+			Buytwo           int     `json:"buyTwo"`
+			Buytwoprice      float64 `json:"buyTwoPrice"`
+			Buythree         int     `json:"buyThree"`
+			Buythreeprice    float64 `json:"buyThreePrice"`
+			Buyfour          int     `json:"buyFour"`
+			Buyfourprice     float64 `json:"buyFourPrice"`
+			Buyfive          int     `json:"buyFive"`
+			Buyfiveprice     float64 `json:"buyFivePrice"`
+			Sellone          int     `json:"sellOne"`
+			Selloneprice     float64 `json:"sellOnePrice"`
+			Selltwo          int     `json:"sellTwo"`
+			Selltwoprice     float64 `json:"sellTwoPrice"`
+			Sellthree        int     `json:"sellThree"`
+			Sellthreeprice   float64 `json:"sellThreePrice"`
+			Sellfour         int     `json:"sellFour"`
+			Sellfourprice    float64 `json:"sellFourPrice"`
+			Sellfive         int     `json:"sellFive"`
+			Sellfiveprice    float64 `json:"sellFivePrice"`
+			Minurl           string  `json:"minurl"`
+			Dayurl           string  `json:"dayurl"`
+			Weekurl          string  `json:"weekurl"`
+			Monthurl         string  `json:"monthurl"`
+		} `json:"stockinfo"`
 		Market struct {
 			Shanghai struct {
-				Name       string  `json:"name,omitempty"`
-				Curdot     float64 `json:"curdot,omitempty"`
-				Curprice   float64 `json:"curprice,omitempty"`
-				Rate       float64 `json:"rate,omitempty"`
-				Dealnumber float64 `json:"dealnumber,omitempty"`
-				Turnover   float64 `json:"turnover,omitempty"`
-			} `json:"shanghai,omitempty"`
+				Name       string  `json:"name"`
+				Curdot     float64 `json:"curdot"`
+				Curprice   float64 `json:"curprice"`
+				Rate       float64 `json:"rate"`
+				Dealnumber int     `json:"dealnumber"`
+				Turnover   int     `json:"turnover"`
+			} `json:"shanghai"`
 			Shenzhen struct {
-				Name       string  `json:"name,omitempty"`
-				Curdot     float64 `json:"curdot,omitempty"`
-				Curprice   float64 `json:"curprice,omitempty"`
-				Rate       float64 `json:"rate,omitempty"`
-				Dealnumber float64 `json:"dealnumber,omitempty"`
-				Turnover   float64 `json:"turnover,omitempty"`
-			} `json:"shenzhen,omitempty"`
+				Name       string  `json:"name"`
+				Curdot     float64 `json:"curdot"`
+				Curprice   float64 `json:"curprice"`
+				Rate       float64 `json:"rate"`
+				Dealnumber int     `json:"dealnumber"`
+				Turnover   int     `json:"turnover"`
+			} `json:"shenzhen"`
 			Dji struct {
-				Name     string  `json:"name,omitempty"`
-				Date     string  `json:"date,omitempty"`
-				Curdot   float64 `json:"curdot,omitempty"`
-				Rate     float64 `json:"rate,omitempty"`
-				Growth   float64 `json:"growth,omitempty"`
-				Startdot float64 `json:"startdot,omitempty"`
-				Closedot float64 `json:"closedot,omitempty"`
-				Hdot     float64 `json:"hdot,omitempty"`
-				Ldot     float64 `json:"ldot,omitempty"`
-				Turnover int     `json:"turnover,omitempty"`
-			} `json:"DJI,omitempty"`
+				Name     string  `json:"name"`
+				Date     string  `json:"date"`
+				Curdot   float64 `json:"curdot"`
+				Rate     float64 `json:"rate"`
+				Growth   float64 `json:"growth"`
+				Startdot float64 `json:"startdot"`
+				Closedot float64 `json:"closedot"`
+				Hdot     float64 `json:"hdot"`
+				Ldot     float64 `json:"ldot"`
+				Turnover int     `json:"turnover"`
+			} `json:"DJI"`
 			Ixic struct {
-				Name     string  `json:"name,omitempty"`
-				Date     string  `json:"date,omitempty"`
-				Curdot   float64 `json:"curdot,omitempty"`
-				Rate     float64 `json:"rate,omitempty"`
-				Growth   float64 `json:"growth,omitempty"`
-				Startdot float64 `json:"startdot,omitempty"`
-				Closedot float64 `json:"closedot,omitempty"`
-				Hdot     float64 `json:"hdot,omitempty"`
-				Ldot     float64 `json:"ldot,omitempty"`
-				Turnover int     `json:"turnover,omitempty"`
-			} `json:"IXIC,omitempty"`
+				Name     string  `json:"name"`
+				Date     string  `json:"date"`
+				Curdot   float64 `json:"curdot"`
+				Rate     float64 `json:"rate"`
+				Growth   float64 `json:"growth"`
+				Startdot float64 `json:"startdot"`
+				Closedot float64 `json:"closedot"`
+				Hdot     float64 `json:"hdot"`
+				Ldot     float64 `json:"ldot"`
+				Turnover int64   `json:"turnover"`
+			} `json:"IXIC"`
 			Inx struct {
-				Name     string  `json:"name,omitempty"`
-				Date     string  `json:"date,omitempty"`
-				Curdot   float64 `json:"curdot,omitempty"`
-				Rate     float64 `json:"rate,omitempty"`
-				Growth   float64 `json:"growth,omitempty"`
-				Startdot float64 `json:"startdot,omitempty"`
-				Closedot float64 `json:"closedot,omitempty"`
-				Hdot     float64 `json:"hdot,omitempty"`
-				Ldot     float64 `json:"ldot,omitempty"`
-				Turnover int     `json:"turnover,omitempty"`
-			} `json:"INX,omitempty"`
+				Name     string  `json:"name"`
+				Date     string  `json:"date"`
+				Curdot   float64 `json:"curdot"`
+				Rate     float64 `json:"rate"`
+				Growth   float64 `json:"growth"`
+				Startdot float64 `json:"startdot"`
+				Closedot float64 `json:"closedot"`
+				Hdot     float64 `json:"hdot"`
+				Ldot     float64 `json:"ldot"`
+				Turnover int     `json:"turnover"`
+			} `json:"INX"`
 			Hsi struct {
-				Name      string  `json:"name,omitempty"`
-				Date      string  `json:"date,omitempty"`
-				Curdot    float64 `json:"curdot,omitempty"`
-				Rate      float64 `json:"rate,omitempty"`
-				Growth    float64 `json:"growth,omitempty"`
-				Startdot  float64 `json:"startdot,omitempty"`
-				Closedot  float64 `json:"closedot,omitempty"`
-				Hdot      float64 `json:"hdot,omitempty"`
-				Ldot      float64 `json:"ldot,omitempty"`
-				Turnover  float64 `json:"turnover,omitempty"`
-				Five2Hdot float64 `json:"52hdot,omitempty"`
-				Five2Ldot float64 `json:"52ldot,omitempty"`
-			} `json:"HSI,omitempty"`
-		} `json:"market,omitempty"`
-	} `json:"retData,omitempty"`
+				Name      string  `json:"name"`
+				Date      string  `json:"date"`
+				Curdot    float64 `json:"curdot"`
+				Rate      float64 `json:"rate"`
+				Growth    float64 `json:"growth"`
+				Startdot  float64 `json:"startdot"`
+				Closedot  float64 `json:"closedot"`
+				Hdot      float64 `json:"hdot"`
+				Ldot      float64 `json:"ldot"`
+				Turnover  int     `json:"turnover"`
+				Five2Hdot float64 `json:"52hdot"`
+				Five2Ldot float64 `json:"52ldot"`
+			} `json:"HSI"`
+		} `json:"market"`
+	} `json:"retData"`
 }
 
 func BaiduStoctRequest(sid string, ret *BaiduStoctInfo) (*BaiduStoctInfo, error) {
