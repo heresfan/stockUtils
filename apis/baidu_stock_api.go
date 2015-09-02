@@ -32,31 +32,31 @@ type BaiduStoctInfo struct {
 			Auctionprice     float64 `json:"auctionPrice"`
 			Totalnumber      int     `json:"totalNumber"`
 			Turnover         int     `json:"turnover"`
-			Increase         float64 `json:"increase"`
-			Buyone           int     `json:"buyOne"`
-			Buyoneprice      float64 `json:"buyOnePrice"`
-			Buytwo           int     `json:"buyTwo"`
-			Buytwoprice      float64 `json:"buyTwoPrice"`
-			Buythree         int     `json:"buyThree"`
-			Buythreeprice    float64 `json:"buyThreePrice"`
-			Buyfour          int     `json:"buyFour"`
-			Buyfourprice     float64 `json:"buyFourPrice"`
-			Buyfive          int     `json:"buyFive"`
-			Buyfiveprice     float64 `json:"buyFivePrice"`
-			Sellone          int     `json:"sellOne"`
-			Selloneprice     float64 `json:"sellOnePrice"`
-			Selltwo          int     `json:"sellTwo"`
-			Selltwoprice     float64 `json:"sellTwoPrice"`
-			Sellthree        int     `json:"sellThree"`
-			Sellthreeprice   float64 `json:"sellThreePrice"`
-			Sellfour         int     `json:"sellFour"`
-			Sellfourprice    float64 `json:"sellFourPrice"`
-			Sellfive         int     `json:"sellFive"`
-			Sellfiveprice    float64 `json:"sellFivePrice"`
-			Minurl           string  `json:"minurl"`
-			Dayurl           string  `json:"dayurl"`
-			Weekurl          string  `json:"weekurl"`
-			Monthurl         string  `json:"monthurl"`
+			//Increase         float64 `json:"increase"`
+			Buyone         int     `json:"buyOne"`
+			Buyoneprice    float64 `json:"buyOnePrice"`
+			Buytwo         int     `json:"buyTwo"`
+			Buytwoprice    float64 `json:"buyTwoPrice"`
+			Buythree       int     `json:"buyThree"`
+			Buythreeprice  float64 `json:"buyThreePrice"`
+			Buyfour        int     `json:"buyFour"`
+			Buyfourprice   float64 `json:"buyFourPrice"`
+			Buyfive        int     `json:"buyFive"`
+			Buyfiveprice   float64 `json:"buyFivePrice"`
+			Sellone        int     `json:"sellOne"`
+			Selloneprice   float64 `json:"sellOnePrice"`
+			Selltwo        int     `json:"sellTwo"`
+			Selltwoprice   float64 `json:"sellTwoPrice"`
+			Sellthree      int     `json:"sellThree"`
+			Sellthreeprice float64 `json:"sellThreePrice"`
+			Sellfour       int     `json:"sellFour"`
+			Sellfourprice  float64 `json:"sellFourPrice"`
+			Sellfive       int     `json:"sellFive"`
+			Sellfiveprice  float64 `json:"sellFivePrice"`
+			Minurl         string  `json:"minurl"`
+			Dayurl         string  `json:"dayurl"`
+			Weekurl        string  `json:"weekurl"`
+			Monthurl       string  `json:"monthurl"`
 		} `json:"stockinfo"`
 		Market struct {
 			Shanghai struct {
